@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box">div1
+		<div class="c1">这是测试1</div>
+		<div class="c1">这是测试2</div>
+		<div class="c1">这是测试3</div>
+		<p class="c1">p1</p>
+		<p class="c1">p2</p>
+		</div>
+		<div class="c1">class选择器</div>
+		<div class="c1">class选择器</div>
+		<div class="c1">class选择器</div>
+		
+	<!----------------------------->	
+	<!--练习  查找p标签-->	
+	<div id="t1">   
+		<!--getElementById("t1")-->
+		<p>找这个</p>
+		<p>找这个</p>     
+		<!--t1.getElementsByTagName("p")-->
+	</div>
+	<!----------------->
+	<div class="content">
+		<!--content = getElemntsByClassName("content")[0]-->
+		<div class="one"></div>
+		<!---->
+		<p class="one">还有这个</p>
+		<p class="one">还有这个</p>
+	</div>
+	</body>
+</html>
+<script type="text/javascript">
+	//1.通过id名称获取标签(对象)
+	//document 文档，在这指代当前文档！
+	var box = document.getElementById("box");
+	console.log(box, typeof box);
+	
+	//2.通过class名称获取一组标签(注意是存储标签的容器)
+	var c1 = document.getElementsByClassName("c1");
+	console.log(c1, typeof c1);
+	console.log(c1[0]);
+	
+	//3.通过标签名获取一组标签(获取的依然是存储标签的容器)
+	var divs = document.getElementsByTagName("div");
+	console.log(divs);
+	console.log(divs[0], divs[1]);
+	
+	//----------------------------------------
+	var m1 = box.getElementsByClassName("c1");
+	var m2 = box.getElementsByTagName("div");
+	//方式2和方式3.除了可以使用document查找整个文档；还可以使用某一个标签对象调用此方法，去查找本标签中符合条件的子标签(本质就是按照范围查找);
+	//------------------------------------------
+	//第一段
+	var t1 = document.getElementById("t1");
+	var p1 = t1.getElementsByTagName("p");
+	console.log(p1);
+	//第二段
+	var content = document.getElementsByClassName("content");
+	//但是具体能用的是标签对象
+	var p2 = content[0].getElementsByTagName("p");
+	console.log(p2);
+	
+</script>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script type="text/javascript">
+	/*
+	 1.赋值运算符 = 从后往前编译
+	 2.算术运算符 + — * / % ++ --
+	 3.比较运算符  > < <= >= == === !=
+	 4.逻辑运算符  && || !
+	 5.条件运算符  ？ :
+	 6.复合运算符 += -= *=  /= %=
+	 */
+	//1.赋值运算符
+	var a=90;
+	//2.算术运算符
+	/*
+	对于number是加法：
+	对于String是拼接
+	如果是number+string 那就会将number转为string在拼接！
+	- * / %
+	如果是number和string算术运算，会将string转为number在运算！
+	这种叫做数据类型的隐式转换！
+	 */
+	var b=2+3;
+	var c="哈哈"+"呵呵";
+	var d="9"+9;
+	var e=10-"5";
+	console.log(b,typeof b);
+	console.log(c,typeof c);
+	console.log(d,typeof d);
+	console.log(e,typeof e);
+    e++;//相当于e=e+1;
+    console.log(e);
+    console.log(--e);
+    /*
+    ++e;同e++;
+            但是如果除了运算之外还有别的语句，那么++在前就先自增后执行语句！如果++在后，就先执行语句在自增！
+    --同++!
+     */
+    //除法:注意js中没有整数和小数的区分
+    var num=8/3;
+    console.log(num);
+    //取余% 注意：只取余数部分
+    num=10%3;
+    console.log(num);
+    //--------------------------
+    //3.复合运算符+= -= ...
+    var num=10;
+    num =num+5;//简写 num +=5;
+	num =num-5;//简写 num -=5;
+	num =num*5;//简写 num *=5;
+	num =num/5; 
+	//num/=5;
+	num =num%5; //num%=5;
+	//注意 - / % 必须符合以上写法才可以简写！
+	//4.比较运算符---------
+	/*
+	数据类型中的第五种！布尔类型，只有两个值true和false
+	 */
+	var result=3>6;
+	console.log(result,typeof result);
+	var m=10;
+	var n="10";
+	console.log(m!=n);
+	console.log(m == n);
+	console.log(m === n);
+	console.log(m === n);
+	/*
+	 != 和 == 一层级，仅仅判断值，不管类型！
+	 !== 和=== 一个层级，不仅判断值而且还判断类型!
+	 */
+	//5.逻辑运算符------------------
+	/*
+	&& 连接多个条件，必须所有条件为真，结果才为真！
+	|| 连接多个条件，任意一个条件为真，结果就为真！
+	!  对结果取反!
+	 */
+	result=6<7&&7>8;
+	console.log(result);
+	console.log(7<8&&8<9&&9<11);
+	num=1;
+	console.log(3>4&&num++);
+	console.log(num);
+	//6.条件运算符（三目运算符）----------
+	//boolean? 值1:值2;
+	//如果boolean为true则取走值1;
+	//如果boolean为false则取走2;
+	var num=7>6?1:0;
+	var n1=190;
+	var n2=100;
+	var max=n1>n2?n1:n2;
+	console.log(max);
+	var age=17;
+	var str=age>18?"可以进网吧":"哪凉快哪去";
+	console.log(str);
+	
+</script>

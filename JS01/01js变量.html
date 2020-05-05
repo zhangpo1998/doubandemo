@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+
+		
+	</body>
+</html>
+<!--<script src="js.main.js" type="text/javascript" charset="utf-8">-->
+<!--console.log("hello word")
+src用于引入JS文件
+所以 此位置不会执行任何代码!-->
+		
+</script>
+<!--内部引入-->
+<script type="text/javascript">
+	//控制台输出，可以在浏览器的控制台console中查看输出的数据！
+	console.log("你好 世界");
+	/*
+	 js是弱类型语言！所以数据类型的区分是借助浏览器的解析进行判断！
+	 在js中定义变量，关键字---var
+	 variable--变量
+	 */
+	//赋值号
+	var a=10;
+	var b=10.9;
+	var c="娃娃鱼"
+	var d="提款机"
+	console.log(a,b,c,d);
+	//typeof
+	console.log(a, typeof a);
+	console.log(b, typeof b);
+	console.log(c, typeof c);
+	console.log(d, typeof d);
+	/*变量名的定义规则
+	 * 1.不要使用系统关键字
+	 * 2.见名知意
+	 * 3.变量名的组成可以是数字，字母，下划线，但是不要以数字开头！例如：1a X! a1 √！
+	 */
+	/*
+	 * js中的数据类型
+	 * 1.number 数字类型（整数，小数）
+	 * NaN 特殊的数字类型，是不合法运算的结果！
+	 * 2.string 字符串（不区分单双引号）
+	 * 3.underfined 未定义类型（就是声明了变量但没有赋值）
+	 * 4.Object 对象类型
+	 */
+	var e;
+	console.log(e, typeof e);
+	a=e+1;
+	console.log(a);
+	//4.对象类型
+	var student={
+		name:"哈哈",
+		age:18,
+		sex:'boy'
+	}
+	console.log(student,typeof student);
+</script>

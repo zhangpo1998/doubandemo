@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="one" onclick="print()">点击</div>
+		<div class="two">再点击</div>
+	</body>
+</html>
+<script type="text/javascript">
+	//函数---代码块，不会立刻执行，需要调用！
+	function print(){
+		var a =10;
+		console.log(a);
+	}
+	//--------------------------
+	var two=document.getElementsByClassName("two")[0];
+	var b=10;
+	two.onclick=function(){
+		b++;
+		console.log(b);
+	}
+	
+</script>
